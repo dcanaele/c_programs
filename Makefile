@@ -6,17 +6,17 @@
 .PHONY: all clean
 
 CC=gcc
-CFLAGS= -Werror -Wextra -tui -g
+CFLAGS= -Wall -Wextra -g
 CPFLAGS=
 LDFLAGS=
 
 all: cmpt263_ex1
 
-cmpt263_ex1: cmpt263_ex1.o
-	$(CC) $(CFLAGS) cmpt263_ex1.o -o cmpt263_ex1
+cmpt263_ex1: CMPT263_ex1.o
+	$(CC) $(CFLAGS) CMPT263_ex1.o -o cmpt263_ex1
 
-cmpt263_ex1.o: cmpt263_ex1.c
-	$(CC) $(CFLAGS) -c cmpt263_ex1.c
+CMPT263_ex1.o: CMPT263_ex1.c
+	$(CC) $(CFLAGS) -c CMPT263_ex1.c
 
 clean:
 	rm -f $(wildcard *.o) cmpt263_ex1
