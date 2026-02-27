@@ -1,12 +1,13 @@
+/*	Test code tp determine the number of distinct values in A[0:n-1]	*/
 #include <stdio.h>
 
 int main(void) 
 {
-	#define MAX 256		/* maximum number of entries, > 0			*/
-	typedef int Entry; 	/* type of entries, use == for equality		*/
-	int n;				/* number of entries						*/
-	Entry A[MAX];		/* A[0:n-1] are the entries					*/
-	int nDist;			/* number of distinct entries in A[0:n-1]	*/
+	#define MAX 256		/* maximum number of entries, > 0				*/
+	typedef int Entry; 	/* type of entries, use == for equality			*/
+	int n;				/* number of entries							*/
+	Entry A[MAX];		/* A[0:n-1] are the entries						*/
+	int nDist;			/* number of distinct entries in A[0:n-1]		*/
 
 	printf("Enter n: ");
 	if (scanf("%d", &n) != 1) error("input failure");
